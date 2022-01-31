@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Arrow Functions</h1>
+    </header>
+    <main>
+      <pre>
+        &lt;script&gt;
+          // Conventional function
+          window.onload = () =&gt; {
+            function calculateInterest(principal, rate, time) {
+              const accruedAmount = principal * (1 + rate * time);
+              return accruedAmount;
+            }
+
+            const amount = calculateInterest(30000, 0.03, 20);
+          };
+
+          // Arrow functions
+          window.onload = () =&gt; {
+            // with explicit return
+            const calculateInterest = (principal, rate, time) =&gt; {
+              const accruedAmount = principal * (1 + rate * time);
+              return accruedAmount;
+            };
+
+            // with implicit return
+            const calcWithImplicitReturn = (principal, rate, time) =&gt;
+              principal * (1 + rate * time);
+
+            const amount = calculateInterest(30000, 0.03, 20);
+            const amount2 = calcWithImplicitReturn(30000, 0.03, 20);
+          };
+        &lt;/script&gt;
+      </pre>
+      <script>
+        // Conventional function
+        window.onload = () => {
+          function calculateInterest(principal, rate, time) {
+            const accruedAmount = principal * (1 + rate * time);
+            return accruedAmount;
+          }
+
+          const amount = calculateInterest(30000, 0.03, 20);
+        };
+
+        // Arrow functions
+        window.onload = () => {
+          // with explicit return
+          const calculateInterest = (principal, rate, time) => {
+            const accruedAmount = principal * (1 + rate * time);
+            return accruedAmount;
+          };
+
+          // with implicit return
+          const calcWithImplicitReturn = (principal, rate, time) =>
+            principal * (1 + rate * time);
+
+          const amount = calculateInterest(30000, 0.03, 20);
+          console.log(`amount: ${amount}`);
+
+          const amount2 = calcWithImplicitReturn(4500, 0.0373, 20);
+          console.log(`amount2: ${amount2}`);
+
+          // arrow function with implicit object return
+          const getMyObject = (x, y) => ({
+            product: x + y,
+            cos: Math.cos(x),
+            atan: Math.atan2(y, x),
+          });
+
+          console.log(getMyObject(10, 15));
+        };
+      </script>
+    </main>
+  </body>
+</html>

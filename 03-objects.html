@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h2>Objects</h2>
+    </header>
+    <main>
+      <button id="btn1">Honk the Horn</button>
+      <pre>
+        &lt;script&gt;
+          const emptyObject = {};
+
+          const car = {
+            make: &quot;Honda&quot;,
+            model: &quot;Civic&quot;,
+            doors: 4,
+            timesHonked: 0,
+            honk: function () {
+              car.timesHonked++;
+              console.log(&quot;Beep beep!&quot;, car.timesHonked);
+            },
+          };
+          console.log(car);
+          console.log(typeof car);
+
+          const btn = document.querySelector(&quot;#btn1&quot;);
+          btn.onclick = function () {
+            car.honk();
+          };
+        &lt;/script&gt;
+      </pre>
+      <script>
+        const emptyObject = {};
+
+        const car = {
+          make: "Honda",
+          model: "Civic",
+          doors: 4,
+          timesHonked: 0,
+          honk: function () {
+            car.timesHonked++;
+            console.log("Beep beep!", car.timesHonked);
+          },
+        };
+        console.log(car);
+        console.log(typeof car);
+
+        const btn = document.querySelector("#btn1");
+        btn.onclick = function () {
+          car.honk();
+        };
+      </script>
+    </main>
+  </body>
+</html>

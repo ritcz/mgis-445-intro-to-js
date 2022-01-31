@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h2>Template Literals</h2>
+    </header>
+    <main>
+      <pre>
+        &lt;script&gt;
+          const firstName = &quot;Taylor&quot;;
+          const greeting = &grave;Good afternoon, ${firstName}.&grave;;
+          console.log(greeting);
+
+          function getTime() {
+            return new Date().toLocaleTimeString();
+          }
+
+          const paragraph = &grave;
+            Hey ${firstName} - the time is ${getTime()}. Also...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nulla sed massa erat. Aliquam iaculis nibh dolor, non
+            tempor mauris ultrices et. Proin neque dolor,
+            bibendum in sagittis at, auctor ut arcu.&grave;;
+
+          console.log(paragraph);
+        &lt;/script&gt;
+      </pre>
+    </main>
+    <script>
+      const firstName = "Taylor";
+      const greeting = `Good afternoon, ${firstName}, it's ${getTime()}.`;
+      console.log(greeting);
+
+      function getTime() {
+        return new Date().toLocaleTimeString();
+      }
+
+      const paragraph = `Hey ${firstName} - the time is ${getTime()}. Also...
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Nulla sed massa erat. Aliquam iaculis nibh dolor, non
+tempor mauris ultrices et. Proin neque dolor,
+bibendum in sagittis at, auctor ut arcu.`;
+
+      console.log(paragraph);
+    </script>
+  </body>
+</html>

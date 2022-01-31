@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Arrays</h1>
+    </header>
+    <main>
+      <h2>Declaration, Types, Access</h2>
+      <pre>
+      &lt;script&gt;
+        // Declare an array
+        const fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;];
+
+        // Delcare an object
+        const trees = { maple: &quot;maple&quot;, oak: &quot;oak&quot;, cedar: &quot;cedar&quot; };
+
+        // show that both are objects
+        console.log(&grave;Type of trees: ${typeof trees}&grave;);
+        console.log(&grave;Type of fruits: ${typeof fruits}&grave;);
+
+        // shows that only fruit is an array
+        console.log(&grave;Are trees an array? ${Array.isArray(trees)}&grave;);
+        console.log(&grave;Are fruits an array? ${Array.isArray(fruits)}&grave;);
+
+        // Access an item in the array
+        console.log(&grave;The first element in the array is &quot;${fruits[0]}&quot;.&grave;);
+
+        // Access the length of the array using the length property
+        console.log(&grave;There are ${fruits.length} elements in the array&grave;);
+
+        // Iterate through an array
+        for (let i = 0; i &lt; fruits.length; i++) {
+          const fruit = fruits[i];
+          console.log(&grave;${fruit} is element ${i}.&grave;);
+        }
+      &lt;/script&gt;
+      </pre>
+      <script>
+        // Declare an array
+        const fruits = ["apple", "banana", "cherry"];
+
+        // Delcare an object
+        const trees = { maple: "maple", oak: "oak", cedar: "cedar" };
+
+        // show that both are objects
+        console.log(`Type of trees: ${typeof trees}`);
+        console.log(`Type of fruits: ${typeof fruits}`);
+
+        // shows that only fruit is an array
+        console.log("Are trees an array?", Array.isArray(trees));
+        console.log("Are fruits an array?", Array.isArray(fruits));
+
+        // Access an item in the array
+        console.log(`The first element in the array is "${fruits[0]}".`);
+
+        // Access the length of the array using the length property
+        console.log(`There are ${fruits.length} elements in the array`);
+
+        // Iterate through an array
+        for (let i = 0; i < fruits.length; i++) {
+          const fruit = fruits[i];
+          console.log(`${fruit} is element ${i}.`);
+        }
+      </script>
+      <h2 id="functions">Array Methods</h2>
+      <pre>
+      &lt;script&gt;
+        // Add an element to the end of the array with push()
+        fruits.push(&quot;dragon fruit&quot;);
+        console.log(&quot;Pushed an element&quot;, fruits);
+
+        // Add an element to the beginning of the array with unshift()
+        fruits.unshift(&quot;acai berry&quot;);
+        console.log(&quot;Unshifted an element&quot;, fruits);
+
+        const lastFruit = fruits.pop();
+        console.log(&grave;Popped ${lastFruit} from fruits.&grave;);
+        console.log(&quot;Remaining fruits:&quot;, fruits);
+
+        // Sort elements an array
+        const numbers = [10, 27, 30, 12, 87, 52, 4];
+        console.log(&quot;Before Sorting&quot;, numbers);
+
+        // note that this actually changes the array
+        numbers.sort((a, b) =&gt; a - b);
+        console.log(&quot;After Sorting&quot;, numbers);
+
+        // reverses the order of the elements in the array
+        numbers.reverse();
+        console.log(&quot;After reversing&quot;, numbers);
+
+        const luckyNumbers = numbers.slice(2, 5);
+        console.log(&quot;Slice of the array&quot;, luckyNumbers);
+      &lt;/script&gt;
+      </pre>
+      <script>
+        // Add an element to the end of the array with push()
+        fruits.push("dragon fruit");
+        console.log("Pushed an element", fruits);
+
+        // Add an element to the beginning of the array with unshift()
+        fruits.unshift("acai berry");
+        console.log("Unshifted an element", fruits);
+
+        const lastFruit = fruits.pop();
+        console.log(`Popped ${lastFruit} from fruits.`);
+        console.log("Remaining fruits:", fruits);
+
+        // Sort elements an array
+        const numbers = [10, 27, 30, 12, 87, 52, 4];
+        console.log("Before Sorting", numbers);
+
+        // note that this actually changes the array
+        numbers.sort((a, b) => a - b);
+        console.log("After Sorting", numbers);
+
+        // reverses the order of the elements in the array
+        numbers.reverse();
+        console.log("After reversing", numbers);
+
+        const luckyNumbers = numbers.slice(2, 5);
+        console.log("Slice of the array", luckyNumbers);
+      </script>
+    </main>
+  </body>
+</html>

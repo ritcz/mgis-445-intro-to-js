@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h2>Declaring Variables</h2>
+    </header>
+    <section>
+      <pre>
+      &lt;script&gt;
+        // changeable, legacy
+        var x = 1;
+        console.log(&quot;x&quot;, x);
+
+        // changeable, modern
+        let y = 2;
+        console.log(&quot;y&quot;, y);
+
+        // not changeable
+        const z = 3;
+        console.log(&quot;z&quot;, z);
+
+        // change works
+        x = 100;
+        console.log(&quot;x&quot;, x);
+
+        // change works
+        y = 200;
+        console.log(&quot;y&quot;, y);
+
+        // Throws an error
+        z = 300;
+        console.log(&quot;z&quot;, z);
+      &lt;/script&gt;
+    </pre
+      >
+      <script>
+        // changeable, legacy
+        var x = 1;
+        console.log("x", x);
+
+        // changeable, modern
+        let y = 2;
+        console.log("y", y);
+
+        // not changeable
+        const z = 3;
+        console.log("z", z);
+
+        // change works
+        x = 100;
+        console.log("x", x);
+
+        // change works
+        y = 200;
+        console.log("y", y);
+
+        // Throws an error
+        z = 300;
+        console.log("z", z);
+      </script>
+    </section>
+    <header><h2>Strict Mode</h2></header>
+    <section>
+      <xmp>
+        <script>
+          "use strict"; // strict mode is on
+          // no error because we declared the cow variable
+          const cow = "better than pig";
+          console.log("cow", cow);
+
+          // will cause an error and execution will stop
+          horse = "better than cow";
+          console.log("horse", horse);
+
+          console.log('but my cow!', cow);
+        </script>
+        <script>
+          // this will still run - not in strict mode in this block
+          donkey = "better than snake";
+          console.log("donkey", donkey);
+        </script>
+      </xmp>
+      <script>
+        "use strict"; // strict mode is on
+        // no error because we declared the cow variable
+        const cow = "better than pig";
+        console.log("cow", cow);
+
+        // will cause an error and no more code here will run
+        horse = "better than cow";
+        console.log("horse", horse);
+      </script>
+      <script>
+        // this will still run - not in strict mode in this block
+        donkey = "better than snake";
+        console.log("donkey", donkey);
+      </script>
+    </section>
+  </body>
+</html>

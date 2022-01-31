@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Useful Functions</h1>
+    </header>
+    <main>
+      <style>
+        #sample-container {
+          padding: 1em;
+        }
+        #sample-container div,
+        #sample-container button {
+          margin: 1em;
+        }
+      </style>
+      <div id="sample-container">
+        <button id="the-button">Useless Button</button>
+        <div class="sample">Sample 1</div>
+        <div class="sample">Sample 2</div>
+        <div class="sample">Sample 3</div>
+      </div>
+      <pre>
+      &lt;script&gt;
+        // send info to the console
+        console.log(&quot;test log message&quot;);
+        console.warn(&quot;Warning - This should be avoided but works!&quot;);
+        console.error(&quot;Error - something definitely broke and is not working.&quot;);
+
+        // query the document
+        const theButton = document.querySelector(&quot;#the-button&quot;);
+        console.log(&quot;The Button&quot;, theButton);
+
+        const theDivs = document.querySelectorAll(&quot;.sample&quot;);
+        console.log(&quot;The Sample Divs&quot;, theDivs);
+
+        // get unix timestamp
+        const now = Date.now();
+        console.log(&grave;now: ${now}&grave;);
+
+        // parse string into an integer
+        const intValue = parseInt(&quot;20&quot;);
+        console.log(&grave;intValue: ${intValue}&grave;);
+
+        // parse string into a float (number)
+        const floatString = &quot;20.232&quot;;
+        const floatValue = parseFloat(floatString);
+        console.log(&grave;float value: ${floatValue}, type ${typeof floatValue}&grave;);
+      &lt;/script&gt;
+      </pre>
+      <script>
+        // send info to the console
+        console.log("test log message");
+        console.warn("Warning - This should be avoided but works!");
+        console.error("Error - something definitely broke and is not working.");
+
+        // query the document
+        const theButton = document.querySelector("#the-button");
+        console.log("The Button", theButton);
+
+        const theDivs = document.querySelectorAll(".sample");
+        console.log("The Sample Divs", theDivs);
+
+        // get unix timestamp
+        const now = Date.now();
+        console.log(`now: ${now}`);
+
+        // parse string into an integer
+        const intValue = parseInt("20");
+        console.log(`intValue: ${intValue}`);
+
+        // parse string into a float (number)
+        const floatString = "20.232";
+        const floatValue = parseFloat(floatString);
+        console.log(`float value: ${floatValue}, type ${typeof floatValue}`);
+      </script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <section class="demo1">
+      <h2>Adding JS to a Document</h2>
+      <div>
+        <button id="btn1" onclick="javascript: alert('Clicked Button 1');">
+          Inline JS (eww)
+        </button>
+        <pre>
+        &lt;button id=&quot;btn1&quot; onclick=&quot;javascript: alert(&apos;Clicked Button 1&apos;);&quot;&gt;
+          Inline JS (eww)
+        &lt;/button&gt;
+        </pre>
+      </div>
+      <div>
+        <button id="btn2">Internal JS</button>
+        <pre>
+        &lt;script&gt;
+          const myButton = document.querySelector(&quot;#btn2&quot;);
+
+          myButton.onclick = function () {
+            alert(&quot;Clicked Button 2&quot;);
+          };
+        &lt;/script&gt;
+        </pre>
+      </div>
+      <div>
+        <button id="btn3">External JS</button>
+        <pre>
+        &lt;script src=&quot;./js/script1.js&quot;&gt;&lt;/script&gt;
+        </pre>
+      </div>
+    </section>
+    <script>
+      const myButton = document.querySelector("#btn2");
+
+      myButton.onclick = function () {
+        alert("Clicked Button 2");
+      };
+    </script>
+    <script src="./js/script1.js"></script>
+  </body>
+</html>

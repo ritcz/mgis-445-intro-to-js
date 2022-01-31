@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Functions as First-Class Objects</h1>
+    </header>
+    <main>
+      <xmp>
+        <script>
+          function addNumbers(a, b) {
+            return a + b;
+          }
+          console.log(`Directly: ${addNumbers(1, 1)}`);
+
+          // can be assinged to a variable
+          const variableFn = addNumbers;
+          console.log(`Variable: ${variableFn(2, 2)}`);
+
+          // or an array
+          const myArray = [];
+          myArray.push(variableFn);
+          console.log(`Array Element: ${myArray[0](3, 3)}`);
+
+          // or a member of an object
+          const myObject = {
+            calc: addNumbers,
+          };
+          console.log(`Object Member: ${myObject.calc(4, 4)}`);
+
+          // Can be passed in to a function
+          function calculate(fn, val1, val2) {
+            return fn(val1, val2);
+          }
+          console.log(`Passed to a function: ${calculate(addNumbers, 5, 5)}`);
+
+          // Can be returned from a function
+          function getFunction() {
+            return addNumbers;
+          }
+          const refFn = getFunction();
+          console.log(`Returned from a function: ${refFn(6, 6)}`);
+          console.log(`Also Returned from a function: ${getFunction()(6, 6)}`);
+        </script>
+      </xmp>
+    </main>
+    <script>
+      function addNumbers(a, b) {
+        return a + b;
+      }
+      console.log(`Directly: ${addNumbers(1, 1)}`);
+
+      // can be assinged to a variable
+      const variableFn = addNumbers;
+      console.log(`Variable: ${variableFn(2, 2)}`);
+
+      // or an array
+      const myArray = [];
+      myArray.push(variableFn);
+      console.log(`Array Element: ${myArray[0](3, 3)}`);
+
+      // or a member of an object
+      const myObject = {
+        calc: addNumbers,
+      };
+      console.log(`Object Member: ${myObject.calc(4, 4)}`);
+
+      // Can be passed in to a function
+      function calculate(fn, val1, val2) {
+        return fn(val1, val2);
+      }
+      console.log(`Passed to a function: ${calculate(addNumbers, 5, 5)}`);
+
+      // Can be returned from a function
+      function getFunction() {
+        return addNumbers;
+      }
+      const refFn = getFunction();
+      console.log(`Returned from a function: ${refFn(6, 6)}`);
+      console.log(`Also Returned from a function: ${getFunction()(7, 7)}`);
+    </script>
+  </body>
+</html>

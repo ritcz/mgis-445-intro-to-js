@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MGIS 445 Class 3 Demos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Back</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Debugging</h1>
+    </header>
+    <main>
+      <pre>
+        &lt;script&gt;
+          /* NOTE - this is intentionally broken and intended
+             to be modified in a debugging demo */
+
+          const clickCount = 0; // something isn&apos;t right here...
+          const handleClick = (event) =&gt; {
+            // What&apos;s in our event?
+            console.log(event);
+
+            const testP = document.querySelector(&quot;#test&quot;);
+
+            // do we get anything here?
+            console.log(testP);
+
+            // insert a breakpoint
+            // debugger;
+
+            // check our outputs (null?)
+            if (testP !== undefined) {
+              clickCount = clickCount + 1;
+              testP.innerHTML = &grave;The button has been clicked ${clickCount} times.&grave;;
+            } else {
+              console.error(&quot;No element selected!&quot;, testP);
+            }
+          };
+
+          const btn = document.querySelector(&quot;#btn1&quot;);
+          btn.addEventListener(&quot;click&quot;, handleClick);
+          const someValue = 0;
+          const anotherValue = &quot;super duper!&quot;;
+        &lt;/script&gt;
+      </pre>
+      <div>
+        <!-- Is this id right? -->
+        <p id="#test">The button has not been clicked yet.</p>
+        <button id="btn1">Test The Thing</button>
+      </div>
+      <script>
+        /* NOTE - this is intentionally broken and intended
+           to be modified in a debugging demo */
+
+        const clickCount = 0; // something isn't right here...
+        const handleClick = (event) => {
+          // What's in our event?
+          console.log(event);
+
+          const testP = document.querySelector("#test");
+
+          // do we get anything here?
+          console.log(testP);
+
+          // insert a breakpoint
+          // debugger;
+
+          // check our outputs (null?)
+          if (testP !== undefined) {
+            clickCount = clickCount + 1;
+            testP.innerHTML = `The button has been clicked ${clickCount} times.`;
+          } else {
+            console.error("No element selected!", testP);
+          }
+        };
+
+        const btn = document.querySelector("#btn1");
+        btn.addEventListener("click", handleClick);
+        const someValue = 0;
+        const anotherValue = "super duper!";
+      </script>
+    </main>
+  </body>
+</html>
