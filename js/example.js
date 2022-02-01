@@ -21,15 +21,6 @@ const handleClick = (e) => {
   updateItemsList();
 };
 
-const doTheThing = (arg) => {
-  if (arg.toLowerCase() === "zhu li") {
-    const x = document.querySelector("li#example");
-    if (x) {
-      console.log("trying");
-      x.style.display = "block";
-    }
-  }
-};
 window.onload = () => {
   const x = document.querySelector("li#example");
   x.style.display = "none";

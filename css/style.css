@@ -79,6 +79,7 @@ nav ul li a:visited {
 xmp,
 pre {
   font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
 }
 
 #list {

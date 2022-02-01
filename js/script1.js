@@ -4,8 +4,11 @@ window.onload = () => {
   if (btn3 !== null) {
     btn3.onclick = function () {
       alert("clicked button 3");
+      console.log('Clicked button 3');
     };
   }
 }
 
 console.log('script loaded');
+
+const aConcatString = "content" + " is cool";
